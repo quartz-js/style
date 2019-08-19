@@ -1,11 +1,18 @@
-import { ServiceProvider } from '@quartz/core'
+import { ServiceProvider, container } from '@quartz/core'
+import { StyleService } from '../StyleService'
+import _ from 'lodash'
 
 export class StyleServiceProvider extends ServiceProvider {
   register() {
-
-    this.addLang({
-      'en': require('../../../lang/en.json'),
-      'it': require('../../../lang/it.json')
+    container.get('$quartz.settings').addItem({
+      name: 'style',
+      header: () => import('../../components/StyleHeader'),
+      content: () => import('../../components/StyleContent')
     })
+    
+  }
+  boot() {
+    StyleService.reload();
+    return;
   }
 }

@@ -1,0 +1,37 @@
+<script>
+
+import _ from 'lodash'
+
+export default {
+  props: ['value'],
+  data: () => ({
+    settings: {}
+  }),
+  watch: {
+    value: function (){
+      this.reload();
+    },
+    settings: {
+      handler: function (){
+        let settings = _.clone(this.value);
+        _.set(settings, this.path, this.settings);
+
+        this.$emit('input', settings)
+      },
+      deep: true
+    }
+  },
+  methods: {
+    reload() {
+      let val = _.get(this.value, this.path);
+
+      if (val) {
+        this.settings = val;
+      }
+    }
+  },
+  created() {
+    this.reload();
+  }
+}
+</script>
