@@ -29,6 +29,21 @@
     <div class="text-right">
       <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
     </div>
+
+    <style-content-text-field v-model="settings"/>
+    <div class="text-right">
+      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
+    </div>
+
+    <style-content-textarea v-model="settings"/>
+    <div class="text-right">
+      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
+    </div>
+
+    <style-content-autocomplete v-model="settings"/>
+    <div class="text-right">
+      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
+    </div>
     
     <style-content-button v-model="settings"/>
     <div class="text-right">
@@ -54,6 +69,9 @@ import StyleContentSidebar from './StyleContentSidebar'
 import StyleContentSheet from './StyleContentSheet'
 import StyleContentCard from './StyleContentCard'
 import StyleContentForm from './StyleContentForm'
+import StyleContentTextField from './StyleContentTextField'
+import StyleContentTextarea from './StyleContentTextarea'
+import StyleContentAutocomplete from './StyleContentAutocomplete'
 import StyleContentButton from './StyleContentButton'
 import { StyleService } from '../app/StyleService'
 import { container } from '@quartz/core'
@@ -66,6 +84,9 @@ export default {
     StyleContentSheet,
     StyleContentCard,
     StyleContentForm,
+    StyleContentTextField,
+    StyleContentTextarea,
+    StyleContentAutocomplete,
     StyleContentButton
   },
   data() {
