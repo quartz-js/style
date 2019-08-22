@@ -52,7 +52,7 @@ export default {
   data: () => ({
     path: 'card',
     settings: {
-      color: "#ffffff00",
+      color: "#ffffff",
       outlined: false,
       elevation: 1,
       tile: false,
