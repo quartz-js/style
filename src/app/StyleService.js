@@ -24,6 +24,9 @@ export class StyleService {
       _.map(style.colors, (value, key) => {
         _.set(container.get('$vue.app'), `$vuetify.theme.themes.light.${key}`, value)
       })
+      _.map(style.colors, (value, key) => {
+        _.set(container.get('$vue.app'), `$vuetify.theme.themes.dark.${key}`, value)
+      })
     }
 
     if (container.get('$vue.app')) {
