@@ -25,6 +25,7 @@
           :elevation="settings.elevation"
           :outlined="settings.outlined"
           :tile="settings.tile"
+          :dark="settings.dark"
           v-bind:style="{border: settings.outlined ? settings.borderSize + 'px solid ' + settings.borderColor : 'inherit'}"
         >
           <v-card-text>I'm card text</v-card-text>
@@ -51,12 +52,13 @@ export default {
   data: () => ({
     path: 'card',
     settings: {
-      color: "#ffffff",
+      color: "#ffffff00",
       outlined: false,
       elevation: 1,
       tile: false,
+      dark: false,
       borderSize: "2",
-      borderColor: "#f1f1f1",
+      borderColor: "#f1f1f100",
     }
   })
 }

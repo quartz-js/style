@@ -109,7 +109,7 @@ export default {
       tile: false,
       "x-small": false,
       small: false,
-      medium: false,
+      medium: true,
       large: false,
       "x-large": false
     }

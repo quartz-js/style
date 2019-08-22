@@ -29,8 +29,8 @@ export default {
   data: () => ({
     path: 'sidebar',
     settings: {
-      color: '#ffffff',
-      itemColorActive: '#1976D2',
+      color: '#ffffff00',
+      itemColorActive: '#1976D200',
       dark: false,
       right: false,
       fixed: true,

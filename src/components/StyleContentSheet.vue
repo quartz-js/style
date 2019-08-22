@@ -25,7 +25,7 @@ export default {
   data: () => ({
     path: 'sheet',
     settings: {
-      color: "#ffffff",
+      color: "#ffffffff",
     }
   })
 }
