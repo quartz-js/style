@@ -41,6 +41,7 @@ export class StyleService {
 
     if (style.colors) {
       themes.light = style.colors
+      themes.dark = style.colors
     }
 
     return { 
