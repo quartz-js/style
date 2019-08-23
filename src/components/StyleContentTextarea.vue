@@ -121,7 +121,6 @@ export default {
     StyleContentCommon
   ],
   data: () => ({
-    path: 'textarea',
     model: 'I\'m a text area',
     label: 'I\'m a label',
     hint: 'I\'m here to help you out!',

@@ -27,7 +27,6 @@ export default {
     StyleContentCommon
   ],
   data: () => ({
-    path: 'sidebar',
     settings: {
       color: '#ffffff00',
       itemColorActive: '#1976D200',

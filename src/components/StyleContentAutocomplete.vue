@@ -91,7 +91,6 @@ export default {
     StyleContentCommon
   ],
   data: () => ({
-    path: 'autocomplete',
     model: 'I\'m an autocomplete',
     label: 'I\'m a label',
     hint: 'I\'m here to help you out!',

@@ -50,7 +50,6 @@ export default {
     StyleContentCommon
   ],
   data: () => ({
-    path: 'card',
     settings: {
       color: "#ffffff",
       outlined: false,

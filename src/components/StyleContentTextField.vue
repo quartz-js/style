@@ -91,7 +91,6 @@ export default {
     StyleContentCommon
   ],
   data: () => ({
-    path: 'textField',
     model: 'I\'m a text field',
     label: 'I\'m a label',
     hint: 'I\'m here to help you out!',

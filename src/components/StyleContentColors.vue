@@ -26,7 +26,6 @@ export default {
     StyleContentCommon
   ],
   data: () => ({
-    path: 'colors',
     settings: {
       background: '#fafbff00',
       header: '#FFFFFF00',

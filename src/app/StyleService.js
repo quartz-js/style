@@ -11,12 +11,8 @@ export class StyleService {
   static reload()
   {
     let style = StyleService.get();
-    style.textField && container.set('$quartz.props.q-text-field', style.textField)
-    style.textarea && container.set('$quartz.props.q-textarea', style.textarea)
-    style.autocomplete && container.set('$quartz.props.q-autocomplete', style.autocomplete)
-    style.button && container.set('$quartz.props.q-btn', style.button.basic)
-    style.sidebar && container.set('$quartz.props.q-sidebar', style.sidebar)
-    style.card && container.set('$quartz.props.q-card', style.card)
+
+    container.set('$quartz.props', style)
 
     if (style.general) {
       _.set(container.get('$vue.app'), `$vuetify.theme.dark`, style.general.dark)

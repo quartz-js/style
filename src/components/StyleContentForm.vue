@@ -28,7 +28,6 @@ export default {
     StyleContentCommon
   ],
   data: () => ({
-    path: 'form',
     settings: {
       subheader: false,
     }

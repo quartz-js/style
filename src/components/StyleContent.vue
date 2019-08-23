@@ -1,51 +1,73 @@
 <template>
   <div>
-    <style-content-general v-model="settings"/>
+    <style-content-general path="general" v-model="settings"/>
     <div class="text-right">
       <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
     </div>
 
-    <style-content-colors v-model="settings"/>
+    <style-content-colors path="colors" v-model="settings"/>
+    <div class="text-right">
+      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
+    </div> 
+
+    <style-content-app-bar path="q-app-bar" v-model="settings"/>
     <div class="text-right">
       <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
     </div>
 
-    <style-content-sidebar v-model="settings"/>
+    <style-content-sidebar path="q-sidebar" v-model="settings"/>
     <div class="text-right">
       <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
     </div>
 
-    <style-content-card v-model="settings"/>
+    <style-content-card path="q-card" v-model="settings"/>
     <div class="text-right">
       <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
     </div>
 
-    <style-content-sheet v-model="settings"/>
+    <style-content-sheet path="q-sheet" v-model="settings"/>
     <div class="text-right">
       <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
     </div>
 
-    <style-content-form v-model="settings"/>
+    <style-content-form path="q-form" v-model="settings"/>
     <div class="text-right">
       <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
     </div>
 
-    <style-content-text-field v-model="settings"/>
+    <style-content-text-field path="q-text-field" v-model="settings"/>
     <div class="text-right">
       <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
     </div>
 
-    <style-content-textarea v-model="settings"/>
+    <style-content-textarea path="q-textarea" v-model="settings"/>
     <div class="text-right">
       <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
     </div>
 
-    <style-content-autocomplete v-model="settings"/>
+    <style-content-autocomplete path="q-autocomplete" v-model="settings"/>
     <div class="text-right">
       <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
     </div>
     
-    <style-content-button v-model="settings"/>
+    <style-content-button path="q-btn" v-model="settings">
+      <template slot="title">Buttons</template>
+    </style-content-button>
+
+    <div class="text-right">
+      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
+    </div>
+
+    <style-content-button path="q-btn-table" v-model="settings">
+      <template slot="title">Buttons on Table</template>
+    </style-content-button>
+    <div class="text-right">
+      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
+    </div>
+
+    <style-content-button path="q-btn-input" v-model="settings">
+      <template slot="title">Buttons on Input</template>
+    </style-content-button>
     <div class="text-right">
       <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
     </div>
@@ -72,6 +94,7 @@ import StyleContentForm from './StyleContentForm'
 import StyleContentTextField from './StyleContentTextField'
 import StyleContentTextarea from './StyleContentTextarea'
 import StyleContentAutocomplete from './StyleContentAutocomplete'
+import StyleContentAppBar from './StyleContentAppBar'
 import StyleContentButton from './StyleContentButton'
 import { StyleService } from '../app/StyleService'
 import { container } from '@quartz/core'
@@ -85,6 +108,7 @@ export default {
     StyleContentCard,
     StyleContentForm,
     StyleContentTextField,
+    StyleContentAppBar,
     StyleContentTextarea,
     StyleContentAutocomplete,
     StyleContentButton
