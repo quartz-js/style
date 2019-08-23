@@ -9,6 +9,7 @@
       <q-color-picker v-model="settings.itemColorActive" label="Color Active" class="ma-0" />
       <v-switch v-model="settings.dark" class="ma-1" label="Dark Mode"></v-switch>
       <v-switch v-model="settings.right" class="ma-1" label="Right side"></v-switch>
+      <v-switch v-model="settings.clipped" class="ma-1" label="Clipped"></v-switch>
       <v-switch v-model="settings.fixed" class="ma-1" label="Fixed"></v-switch>
       <v-switch v-model="settings.miniVariant" class="ma-1" label="Mini Variant"></v-switch>
       <v-switch v-model="settings.expandOnHover" class="ma-1" label="Expand On Hover"></v-switch>
@@ -32,6 +33,7 @@ export default {
       itemColorActive: '#1976D200',
       dark: false,
       right: false,
+      clipped: true,
       fixed: true,
       miniVariant: false,
       expandOnHover: false,
