@@ -15,7 +15,7 @@
     </div>
 
     <div v-if="item">
-      <component :is="`style-content-${item.name}`" :path="item.path" v-model="settings" />
+      <component :is="`style-content-${item.component}`" :path="item.value" v-model="settings" />
 
       <div class="text-right">
         <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
@@ -61,52 +61,67 @@ export default {
       settings: {},
       loading: false,
       item: {
-        "name": "colors",
-        "path": "colors",
+        "name": "Colors",
+        "component": "colors",
+        "value": "colors",
       },
       items: [
         {
-          "name": "general",
-          "path": "general",
+          "name": "General",
+          "component": "general",
+          "value": "general",
         }, {
-          "name": "colors",
-          "path": "colors",
+          "name": "Colors",
+          "component": "colors",
+          "value": "colors",
         }, {
-          "name": "app-bar",
-          "path": "q-app-bar",
+          "name": "App Bar",
+          "component": "app-bar",
+          "value": "q-app-bar",
         }, {
-          "name": "sidebar",
-          "path": "q-sidebar",
+          "name": "Sidebar",
+          "component": "sidebar",
+          "value": "q-sidebar",
         }, {
-          "name": "card",
-          "path": "q-card",
+          "name": "Card",
+          "component": "card",
+          "value": "q-card",
         }, {
-          "name": "sheet",
-          "path": "q-sheet",
+          "name": "Sheet",
+          "component": "sheet",
+          "value": "q-sheet",
         }, {
-          "name": "tabs",
-          "path": "q-tabs",
+          "name": "Tabs",
+          "component": "tabs",
+          "value": "q-tabs",
         }, {
-          "name": "form",
-          "path": "q-form",
+          "name": "Form",
+          "component": "form",
+          "value": "q-form",
         }, {
-          "name": "text-field",
-          "path": "q-text-field",
+          "name": "Text Field",
+          "component": "text-field",
+          "value": "q-text-field",
         }, {
-          "name": "textarea",
-          "path": "q-textarea",
+          "name": "Textarea",
+          "component": "textarea",
+          "value": "q-textarea",
         }, {
-          "name": "autocomplete",
-          "path": "q-autocomplete",
+          "name": "Autocomplete",
+          "component": "autocomplete",
+          "value": "q-autocomplete",
         }, {
-          "name": "button",
-          "path": "q-btn",
+          "name": "Button",
+          "component": "button",
+          "value": "q-btn",
         }, {
-          "name": "button",
-          "path": "q-btn-table",
+          "name": "Button on Table",
+          "component": "button",
+          "value": "q-btn-table",
         }, {
-          "name": "button",
-          "path": "q-btn-input"
+          "name": "Button on Input",
+          "component": "button",
+          "value": "q-btn-input"
         }
       ]
     }
