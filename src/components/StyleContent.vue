@@ -30,6 +30,13 @@
       <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
     </div>
 
+
+    <style-content-tabs path="q-tabs" v-model="settings"/>
+    <div class="text-right">
+      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
+    </div> 
+
+
     <style-content-form path="q-form" v-model="settings"/>
     <div class="text-right">
       <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
@@ -89,6 +96,7 @@ import StyleContentGeneral from './StyleContentGeneral'
 import StyleContentColors from './StyleContentColors'
 import StyleContentSidebar from './StyleContentSidebar'
 import StyleContentSheet from './StyleContentSheet'
+import StyleContentTabs from './StyleContentTabs'
 import StyleContentCard from './StyleContentCard'
 import StyleContentForm from './StyleContentForm'
 import StyleContentTextField from './StyleContentTextField'
@@ -105,6 +113,7 @@ export default {
     StyleContentColors,
     StyleContentSidebar,
     StyleContentSheet,
+    StyleContentTabs,
     StyleContentCard,
     StyleContentForm,
     StyleContentTextField,
