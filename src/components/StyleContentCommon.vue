@@ -26,12 +26,12 @@ export default {
       let val = _.get(this.value, this.path);
 
       if (val) {
-        this.settings = val;
+        this.settings = clone ? _.clone(val) : val;
       }
     }
   },
   created() {
-    this.reload();
+    this.reload(true)
   }
 }
 </script>
