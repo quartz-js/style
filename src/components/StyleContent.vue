@@ -128,7 +128,7 @@ export default {
   },
   watch: {
     settings: function (){
-    },
+    }
   },
   mounted () {
     this.settings = JSON.parse(container.get('settings').get('style', '{}'))
