@@ -1,92 +1,26 @@
 <template>
   <div>
-    <style-content-general path="general" v-model="settings"/>
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
+    <div class='ma-3'>
+      <v-select
+        :items="items"
+        v-model="item"
+        filled
+        label="Components"
+        placeholder="Pick one component"
+        outlined
+        item-text="name"
+        return-object
+        :hide-details="true"
+      ></v-select>
     </div>
 
-    <style-content-colors path="colors" v-model="settings"/>
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
-    </div> 
+    <div v-if="item">
+      <component :is="`style-content-${item.name}`" :path="item.path" v-model="settings" />
 
-    <style-content-app-bar path="q-app-bar" v-model="settings"/>
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
+      <div class="text-right">
+        <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
+      </div>
     </div>
-
-    <style-content-sidebar path="q-sidebar" v-model="settings"/>
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
-    </div>
-
-    <style-content-card path="q-card" v-model="settings"/>
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
-    </div>
-
-    <style-content-sheet path="q-sheet" v-model="settings"/>
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
-    </div>
-
-
-    <style-content-tabs path="q-tabs" v-model="settings"/>
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
-    </div> 
-
-
-    <style-content-form path="q-form" v-model="settings"/>
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
-    </div>
-
-    <style-content-text-field path="q-text-field" v-model="settings"/>
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
-    </div>
-
-    <style-content-textarea path="q-textarea" v-model="settings"/>
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
-    </div>
-
-    <style-content-autocomplete path="q-autocomplete" v-model="settings"/>
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
-    </div>
-    
-    <style-content-button path="q-btn" v-model="settings">
-      <template slot="title">Buttons</template>
-    </style-content-button>
-
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
-    </div>
-
-    <style-content-button path="q-btn-table" v-model="settings">
-      <template slot="title">Buttons on Table</template>
-    </style-content-button>
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
-    </div>
-
-    <style-content-button path="q-btn-input" v-model="settings">
-      <template slot="title">Buttons on Input</template>
-    </style-content-button>
-    <div class="text-right">
-      <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
-    </div>
-    <!--# Define primary colors
-    # Table - Buttons
-    # General buttons
-    # Header color
-    # Drawers + Drawer color
-    # Customizable tabs for page show
-  -->
-    <!--<h3>Saved</h3>-->
-    <!---->
   </div>
 </template>
 
@@ -125,7 +59,56 @@ export default {
   data() {
     return {
       settings: {},
-      loading: false
+      loading: false,
+      item: {
+        "name": "colors",
+        "path": "colors",
+      },
+      items: [
+        {
+          "name": "general",
+          "path": "general",
+        }, {
+          "name": "colors",
+          "path": "colors",
+        }, {
+          "name": "app-bar",
+          "path": "q-app-bar",
+        }, {
+          "name": "sidebar",
+          "path": "q-sidebar",
+        }, {
+          "name": "card",
+          "path": "q-card",
+        }, {
+          "name": "sheet",
+          "path": "q-sheet",
+        }, {
+          "name": "tabs",
+          "path": "q-tabs",
+        }, {
+          "name": "form",
+          "path": "q-form",
+        }, {
+          "name": "text-field",
+          "path": "q-text-field",
+        }, {
+          "name": "textarea",
+          "path": "q-textarea",
+        }, {
+          "name": "autocomplete",
+          "path": "q-autocomplete",
+        }, {
+          "name": "button",
+          "path": "q-btn",
+        }, {
+          "name": "button",
+          "path": "q-btn-table",
+        }, {
+          "name": "button",
+          "path": "q-btn-input"
+        }
+      ]
     }
   },
   watch: {
