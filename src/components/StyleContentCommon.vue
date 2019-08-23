@@ -19,6 +19,12 @@ export default {
         this.$emit('input', settings)
       },
       deep: true
+    },
+    path: {
+      handler: function (){
+        this.reload()
+      },
+      deep: true
     }
   },
   methods: {
@@ -26,12 +32,12 @@ export default {
       let val = _.get(this.value, this.path);
 
       if (val) {
-        this.settings = clone ? _.clone(val) : val;
+        this.settings = val;
       }
     }
   },
-  created() {
-    this.reload(true)
+  mounted() {
+    this.reload()
   }
 }
 </script>
