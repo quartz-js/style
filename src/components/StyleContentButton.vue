@@ -17,30 +17,34 @@
             v-model="settings.hasText"
             label="Has Text"
           ></v-switch>
-          <v-slider
+          <q-text-field
             v-model="settings.minWidth"
             label="Min width"
             min="10"
             max="300"
-          ></v-slider>
-          <v-slider
+            suffix="px"
+          ></q-text-field>
+          <q-text-field
             v-model="settings.maxWidth"
             label="Max width"
             min="10"
             max="300"
-          ></v-slider>
-          <v-slider
+            suffix="px"
+          ></q-text-field>
+          <q-text-field
             v-model="settings.minHeight"
             label="Min height"
             min="10"
             max="300"
-          ></v-slider>
-          <v-slider
+            suffix="px"
+          ></q-text-field>
+          <q-text-field
             v-model="settings.maxHeight"
             label="Max height"
             min="10"
             max="300"
-          ></v-slider>
+            suffix="px"
+          ></q-text-field>
           <v-slider
             v-model="settings.elevation"
             label="Elevation"
