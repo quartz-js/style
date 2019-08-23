@@ -127,7 +127,7 @@ export default {
     hint: 'I\'m here to help you out!',
     placeholder: '',
     settings: {
-      autoGrow: false,
+      autoGrow: true,
       autofocus: true,
       clearable: false,
       counter: 0,
