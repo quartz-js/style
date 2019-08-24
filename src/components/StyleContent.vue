@@ -1,17 +1,15 @@
 <template>
   <div>
     <div class='ma-3'>
-      <v-select
+      <q-select
         :items="items"
         v-model="item"
-        filled
         label="Components"
         placeholder="Pick one component"
-        outlined
         item-text="name"
         return-object
         :hide-details="true"
-      ></v-select>
+      ></q-select>
     </div>
 
     <div v-if="item">
@@ -38,6 +36,7 @@ import StyleContentTextarea from './StyleContentTextarea'
 import StyleContentAutocomplete from './StyleContentAutocomplete'
 import StyleContentAppBar from './StyleContentAppBar'
 import StyleContentButton from './StyleContentButton'
+import StyleContentSelect from './StyleContentSelect'
 import { StyleService } from '../app/StyleService'
 import { container } from '@quartz/core'
 
@@ -54,7 +53,8 @@ export default {
     StyleContentAppBar,
     StyleContentTextarea,
     StyleContentAutocomplete,
-    StyleContentButton
+    StyleContentButton,
+    StyleContentSelect
   },
   data() {
     return {
@@ -106,6 +106,10 @@ export default {
           "name": "Textarea",
           "component": "textarea",
           "value": "q-textarea",
+        }, {
+          "name": "Select",
+          "component": "select",
+          "value": "q-select",
         }, {
           "name": "Autocomplete",
           "component": "autocomplete",
