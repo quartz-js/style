@@ -101,7 +101,7 @@ export default {
     settings: {
         icons: false,
         elevation: 0,
-        color: "#1976d2f",
+        color: "#1976d2",
         backgroundColor: "#FFFFFF00",
         dark: false,
         centered: false,
