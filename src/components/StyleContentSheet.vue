@@ -9,6 +9,20 @@
         md="6"
       >
         <q-color-picker v-model="settings.color" label="Background" class="ma-0"/>
+        <v-switch v-model="settings.tile" label="Tile"></v-switch>
+      </v-col>
+
+      <v-col
+        cols="12"
+        md="6"
+      >
+        <q-sheet
+          :color="settings.color"
+          :tile="settings.tile"
+          class="pa-5"
+        >
+          <span>I'm a sheet</span>
+        </q-sheet>
       </v-col>
     </v-row>
   </v-container>
@@ -23,6 +37,7 @@ export default {
   ],
   data: () => ({
     settings: {
+      tile: true,
       color: "#ffffffff",
     }
   })
