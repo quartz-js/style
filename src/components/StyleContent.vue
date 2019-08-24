@@ -38,6 +38,7 @@ import StyleContentAppBar from './StyleContentAppBar'
 import StyleContentButton from './StyleContentButton'
 import StyleContentSelect from './StyleContentSelect'
 import StyleContentNavigationDrawer from './StyleContentNavigationDrawer'
+import StyleContentDialog from './StyleContentDialog'
 import StyleContentSnackbar from './StyleContentSnackbar'
 import { StyleService } from '../app/StyleService'
 import { container } from '@quartz/core'
@@ -56,6 +57,7 @@ export default {
     StyleContentTextarea,
     StyleContentAutocomplete,
     StyleContentNavigationDrawer,
+    StyleContentDialog,
     StyleContentButton,
     StyleContentSelect,
     StyleContentSnackbar
@@ -91,9 +93,17 @@ export default {
           "component": "sidebar",
           "value": "q-sidebar",
         }, {
-          "name": "Drawer Form",
+          "name": "Navigation Drawer",
           "component": "navigation-drawer",
-          "value": "q-drawer-form",
+          "value": "q-navigation-drawer",
+        }, {
+          "name": "Dialog",
+          "component": "dialog",
+          "value": "q-dialog",
+        }, {
+          "name": "Form",
+          "component": "form",
+          "value": "q-form",
         }, {
           "name": "Card",
           "component": "card",
@@ -106,10 +116,6 @@ export default {
           "name": "Tabs",
           "component": "tabs",
           "value": "q-tabs",
-        }, {
-          "name": "Form",
-          "component": "form",
-          "value": "q-form",
         }, {
           "name": "Text Field",
           "component": "text-field",
