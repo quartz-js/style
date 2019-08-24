@@ -10,12 +10,12 @@
       <v-col cols="6">
         <v-container>
           <v-switch
-            v-model="settings.hasIcon"
-            label="Has Icon"
+            v-model="settings.hideIcon"
+            label="Hide Icon"
           ></v-switch>
           <v-switch
-            v-model="settings.hasText"
-            label="Has Text"
+            v-model="settings.hideText"
+            label="Hide Text"
           ></v-switch>
           <q-text-field
             v-model="settings.minWidth"
@@ -110,23 +110,23 @@ export default {
     types: ['block', 'fab', 'outlined', 'rounded', 'text', 'tile'],
     text: 'Customize me',
     type: ['tile'],
-    size: 'x-small',
+    size: 'medium',
     settings: {
-      hasIcon: true,
-      hasText: true,
+      hideIcon: false,
+      hideText: false,
       minWidth: 20,
       minHeight: 20,
       maxWidth: 300,
       maxHeight: 300,
-      elevation: 0,
+      elevation: 1,
       block: false,
       fab: false,
       outlined: false,
       rounded: false,
       text: false,
-      tile: true,
+      tile: false,
       "x-small": false,
-      small: true,
+      small: false,
       medium: true,
       large: false,
       "x-large": false
