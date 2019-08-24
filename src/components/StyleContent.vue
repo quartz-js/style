@@ -37,6 +37,7 @@ import StyleContentAutocomplete from './StyleContentAutocomplete'
 import StyleContentAppBar from './StyleContentAppBar'
 import StyleContentButton from './StyleContentButton'
 import StyleContentSelect from './StyleContentSelect'
+import StyleContentSnackbar from './StyleContentSnackbar'
 import { StyleService } from '../app/StyleService'
 import { container } from '@quartz/core'
 
@@ -54,7 +55,8 @@ export default {
     StyleContentTextarea,
     StyleContentAutocomplete,
     StyleContentButton,
-    StyleContentSelect
+    StyleContentSelect,
+    StyleContentSnackbar
   },
   data() {
     return {
@@ -74,6 +76,10 @@ export default {
           "name": "Colors",
           "component": "colors",
           "value": "colors",
+        }, {
+          "name": "Snackbar",
+          "component": "snackbar",
+          "value": "q-snackbar",
         }, {
           "name": "App Bar",
           "component": "app-bar",
