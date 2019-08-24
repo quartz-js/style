@@ -101,12 +101,12 @@ export default {
     settings: {
         icons: false,
         elevation: 0,
-        color: "#1976d2",
-        backgroundColor: "#FFFFFF",
+        color: "#1976d2f",
+        backgroundColor: "#FFFFFF00",
         dark: false,
         centered: false,
         grow: false,
-        vertical: false,
+        vertical: true,
         right: false,
     }
   })

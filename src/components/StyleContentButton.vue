@@ -109,16 +109,16 @@ export default {
     sizes: ['x-small', 'small', 'medium', 'large', 'x-large'],
     types: ['block', 'fab', 'outlined', 'rounded', 'text', 'tile'],
     text: 'Customize me',
-    type: [],
-    size: 'medium',
+    type: ['tile'],
+    size: 'x-small',
     settings: {
       hasIcon: true,
       hasText: true,
-      minWidth: undefined,
-      minHeight: undefined,
+      minWidth: 20,
+      minHeight: 20,
       maxWidth: 300,
       maxHeight: 300,
-      elevation: 1,
+      elevation: 0,
       block: false,
       fab: false,
       outlined: false,
@@ -126,7 +126,7 @@ export default {
       text: false,
       tile: true,
       "x-small": false,
-      small: false,
+      small: true,
       medium: true,
       large: false,
       "x-large": false
@@ -167,8 +167,6 @@ export default {
 
       let settings = _.clone(this.settings);
 
-      console.log('Yolo')
-      console.log(val)
       this.sizes.map(i => {
         if (val == i) {
           settings[i] = true;
