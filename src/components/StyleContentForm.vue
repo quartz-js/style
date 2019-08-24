@@ -8,12 +8,11 @@
         cols="12"
         md="6"
       >
-        
-      </v-col>
-      <v-col
-        cols="12"
-        md="6"
-      >
+        <v-select
+          v-model="settings.type"
+          :items="types"
+          label="Type"
+        ></v-select>
       </v-col>
     </v-row>
   </v-container>
@@ -27,8 +26,9 @@ export default {
     StyleContentCommon
   ],
   data: () => ({
+    types: ['q-navigation-drawer', 'q-dialog'],
     settings: {
-      subheader: false,
+      type: 'q-navigation-drawer'
     }
   })
 }
