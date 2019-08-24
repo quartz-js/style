@@ -5,6 +5,7 @@
     </p>
     <div>
       <q-color-picker v-model="settings.color" label="Background" class="ma-0" />
+      <v-switch v-model="settings.app" class="ma-1" label="App"></v-switch>
       <v-switch v-model="settings.dark" class="ma-1" label="Dark Mode"></v-switch>
       <v-switch v-model="settings.right" class="ma-1" label="Right side"></v-switch>
       <v-switch v-model="settings.clipped" class="ma-1" label="Clipped"></v-switch>
@@ -29,14 +30,15 @@ export default {
   ],
   data: () => ({
     settings: {
-      color: '#ffffff00',
+      color: '#ffffff',
+      app: false,
       dark: false,
       right: true,
       clipped: true,
       fixed: true,
       miniVariant: false,
       expandOnHover: false,
-      temporary: false,
+      temporary: true,
       floating: false,
       permanent: false,
       width: "1200"
