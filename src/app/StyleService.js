@@ -5,7 +5,7 @@ export class StyleService {
 
   static get()
   {
-    return JSON.parse(container.get('settings').get('style', '{}'))
+    return container.get('settings').get('style', {})
   }
 
   static reload()
