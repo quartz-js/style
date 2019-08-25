@@ -11,7 +11,6 @@
         :hide-details="true"
       ></q-select>
     </div>
-
     <div v-if="item">
       <component :is="`style-content-${item.component}`" :path="item.value" v-model="settings" />
 
@@ -153,7 +152,7 @@ export default {
     }
   },
   mounted () {
-    this.settings = JSON.parse(container.get('settings').get('style', '{}'))
+    this.settings = container.get('settings').get('style', {})
   },
   methods: {
     update() {
@@ -163,7 +162,7 @@ export default {
 
       this.loading = true;
 
-      container.get('settings').store('style', JSON.stringify(this.settings)).then(() => {
+      container.get('settings').store('style', this.settings).then(() => {
 
         StyleService.reload();
 
