@@ -41,6 +41,7 @@
           max="24"
           clearable
         ></v-slider>
+        <q-color-picker v-model="settings.color" label="Color" class="ma-0" />
       </v-col>
       <v-col
         cols="12"
@@ -60,6 +61,7 @@ export default {
   ],
   data: () => ({
     settings: {
+      color:'#ffffff',
       absolute: false,
       fixed: false,
       dark: false,

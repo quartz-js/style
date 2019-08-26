@@ -74,6 +74,8 @@
           class="ma-1"
           label="Solo"
         ></v-switch>
+        <q-color-picker v-model="settings.color" label="Color" class="ma-0" />
+        <q-color-picker v-model="settings.backgroundColor" label="Background Color" class="ma-0" />
       </v-col>
 
       <v-col
@@ -90,6 +92,8 @@
             :counter="settings.counter ? settings.counter : false"
             :filled="settings.filled"
             :flat="settings.flat"
+            :color="settings.color"
+            :background-color="settings.backgroundColor"
             :label="label"
             :hint="hint"
             :no-resize="settings.noResize"
@@ -125,6 +129,8 @@ export default {
     hint: 'I\'m here to help you out!',
     placeholder: '',
     settings: {
+      color: '#ffffff00',
+      backgroundColor: '#ffffff00',
       autoGrow: true,
       autofocus: true,
       clearable: false,

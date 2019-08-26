@@ -53,6 +53,8 @@
           label="Flat (requires Solo)"
           :disabled="!settings.solo"
         ></v-switch>
+        <q-color-picker v-model="settings.color" label="Color" class="ma-0" />
+        <q-color-picker v-model="settings.backgroundColor" label="Background Color" class="ma-0" />
       </v-col>
       <v-col
         cols="12"
@@ -66,6 +68,8 @@
             v-model="model"
             :label="label"
             :hint="hint"
+            :color="settings.color"
+            :background-color="settings.backgroundColor"
             :placeholder="placeholder"
             :shaped="settings.shaped"
             :outlined="settings.outlined"
@@ -95,6 +99,8 @@ export default {
     hint: 'I\'m here to help you out!',
     placeholder: '',
     settings: {
+      color: '#ffffff00',
+      backgroundColor: '#ffffff00',
       shaped: false,
       outlined: false,
       rounded: false,

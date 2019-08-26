@@ -5,7 +5,6 @@
     </p>
     <div>
       <q-color-picker v-model="settings.background" label="Background" class="ma-0" />
-      <q-color-picker v-model="settings.header" label="Header" class="ma-0" />
       <q-color-picker v-model="settings.primary" label="Primary" class="ma-0" />
       <q-color-picker v-model="settings.secondary" label="Secondary" class="ma-0" />
       <q-color-picker v-model="settings.accent" label="Accent" class="ma-0" />
@@ -27,7 +26,6 @@ export default {
   data: () => ({
     settings: {
       background: '#fafbff00',
-      header: '#FFFFFF00',
       primary: '#1976D2',
       secondary: '#424242',
       accent: '#82B1FF',
