@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-icon left>mdi-palette</v-icon>
+    <q-icon left>mdi-palette</q-icon>
     Style
   </div>
 </template>

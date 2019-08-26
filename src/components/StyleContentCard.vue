@@ -30,7 +30,7 @@
           <v-card-text>I'm card text</v-card-text>
           <v-card-actions>
             <v-btn icon>
-              <v-icon>mdi-heart</v-icon>
+              <q-icon>mdi-heart</q-icon>
             </v-btn>
             <v-btn text>Click</v-btn>
             <v-btn outlined>Click</v-btn>
