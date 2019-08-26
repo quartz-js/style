@@ -39,6 +39,7 @@ import StyleContentSelect from './StyleContentSelect'
 import StyleContentNavigationDrawer from './StyleContentNavigationDrawer'
 import StyleContentDialog from './StyleContentDialog'
 import StyleContentSnackbar from './StyleContentSnackbar'
+import StyleContentIcon from './StyleContentIcon'
 import { StyleService } from '../app/StyleService'
 import { container } from '@quartz/core'
 
@@ -59,7 +60,8 @@ export default {
     StyleContentDialog,
     StyleContentButton,
     StyleContentSelect,
-    StyleContentSnackbar
+    StyleContentSnackbar,
+    StyleContentIcon
   },
   data() {
     return {
@@ -87,6 +89,10 @@ export default {
           "name": "App Bar",
           "component": "app-bar",
           "value": "q-app-bar",
+        }, {
+          "name": "Icon",
+          "component": "icon",
+          "value": "q-icon",
         }, {
           "name": "Sidebar",
           "component": "sidebar",
