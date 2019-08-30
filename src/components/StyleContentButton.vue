@@ -45,6 +45,10 @@
             max="300"
             suffix="px"
           ></q-text-field>
+          <q-text-field
+            v-model="settings.class"
+            label="Custom Css Classes"
+          ></q-text-field>
           <v-slider
             v-model="settings.elevation"
             label="Elevation"
@@ -112,6 +116,7 @@ export default {
     type: ['tile'],
     size: 'medium',
     settings: {
+      class:"mx-5",
       hideIcon: false,
       hideText: false,
       minWidth: 20,

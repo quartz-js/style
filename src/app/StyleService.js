@@ -1,18 +1,36 @@
 import { container } from '@quartz/core'
 import _ from 'lodash'
+import TemplateDefault from '../templates/default'
+import TemplateDarkOrange from '../templates/dark-orange'
 
 export class StyleService {
 
-  static get()
+  static get(data)
   {
-    return container.get('settings').get('style', {})
+    return _.get({
+      'default': TemplateDefault,
+      'dark-orange': TemplateDarkOrange,
+      'custom': _.clone(container.get('settings').get('style', TemplateDefault))
+    }, data )
+  }
+
+  static load(tmpl)
+  {
+    return StyleService.update(StyleService.get(tmpl));
   }
 
   static reload()
   {
-    let style = StyleService.get();
+    let style = StyleService.get(container.get('settings').get('style.template', 'default'));
 
+    StyleService.update(style)
+  }
+
+  static update(style)
+  {
     container.set('$quartz.props', style)
+
+    console.log(JSON.stringify(style.colors))
 
     if (style.general) {
       _.set(container.get('$vue.app'), `$vuetify.theme.dark`, style.general.dark)
@@ -36,18 +54,8 @@ export class StyleService {
 
   static getTheme()
   {
-    let style = StyleService.get()
+    return {
 
-    let themes = {}
-
-    if (style.colors) {
-      themes.light = style.colors
-      themes.dark = style.colors
-    }
-
-    return { 
-      dark: false,
-      themes: themes
     }
   }
 }

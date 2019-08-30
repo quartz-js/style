@@ -1,21 +1,38 @@
 <template>
-  <div>
+  <div v-if="template">
     <div class='ma-3'>
       <q-select
-        :items="items"
-        v-model="item"
-        label="Components"
-        placeholder="Pick one component"
+        :items="templates"
+        v-model="template"
+        label="Template"
+        placeholder="Change template"
         item-text="name"
         return-object
         :hide-details="true"
       ></q-select>
     </div>
-    <div v-if="item">
-      <component :is="`style-content-${item.component}`" :path="item.value" v-model="settings" />
-
+    <div v-if="template.custom">
+      <div class='ma-3'>
+        <q-select
+          :items="items"
+          v-model="item"
+          label="Components"
+          placeholder="Pick one component"
+          item-text="name"
+          return-object
+          :hide-details="true"
+        ></q-select>
+      </div>
+      <div v-if="item">
+        <component :is="`style-content-${item.component}`" :path="item.value" v-model="settings" />
+        <div class="text-right">
+          <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
+        </div>
+      </div>
+    </div>
+    <div v-else>
       <div class="text-right">
-        <q-btn color="primary" @click="update" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
+        <q-btn color="primary" @click="updateTemplate" :loading="loading">{{ $t('$quartz.core.save') }}</q-btn>
       </div>
     </div>
   </div>
@@ -42,6 +59,8 @@ import StyleContentSnackbar from './StyleContentSnackbar'
 import StyleContentIcon from './StyleContentIcon'
 import { StyleService } from '../app/StyleService'
 import { container } from '@quartz/core'
+import TemplateDefault from '../templates/default'
+import _ from 'lodash'
 
 export default {
   components: {
@@ -67,6 +86,22 @@ export default {
     return {
       settings: {},
       loading: false,
+      template: null,
+      templates: [
+        {
+          "name": "default",
+          "value": "default"
+        },
+        {
+          "name": "dark-orange",
+          "value": "dark-orange"
+        },
+        {
+          "name": "custom",
+          "value": "custom",
+          "custom": true
+        }
+      ],
       item: {
         "name": "Colors",
         "component": "colors",
@@ -154,13 +189,39 @@ export default {
     }
   },
   watch: {
-    settings: function (){
+    template: function () {
+      console.log('Yolo')
+      console.log(this.template.value)
+      StyleService.load(this.template.value)
+    },
+    settings: function ()
+    {
+      container.get('settings').set('style', this.settings);
     }
   },
   mounted () {
-    this.settings = container.get('settings').get('style', {})
+    this.settings = container.get('settings').get('style', _.clone(TemplateDefault))
+    let val = container.get('settings').get('style.template', 'default')
+    this.template = {
+      value: val,
+      name: val
+    }
   },
   methods: {
+    updateTemplate() {
+      if (this.loading) {
+        return;
+      }
+
+      this.loading = true;
+
+      container.get('settings').store('style.template', this.template.value).then(() => {
+
+        StyleService.reload();
+
+        this.loading = false;
+      })
+    },
     update() {
       if (this.loading) {
         return;
@@ -170,6 +231,8 @@ export default {
 
       container.get('settings').store('style', this.settings).then(() => {
 
+        return container.get('settings').store('style.template', this.template.value)
+      }).then(() => {
         StyleService.reload();
 
         this.loading = false;

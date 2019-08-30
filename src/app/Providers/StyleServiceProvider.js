@@ -9,7 +9,6 @@ export class StyleServiceProvider extends ServiceProvider {
       header: () => import('../../components/StyleHeader'),
       content: () => import('../../components/StyleContent')
     })
-    
   }
   boot() {
     StyleService.reload();
