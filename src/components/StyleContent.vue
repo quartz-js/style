@@ -190,8 +190,6 @@ export default {
   },
   watch: {
     template: function () {
-      console.log('Yolo')
-      console.log(this.template.value)
       StyleService.load(this.template.value)
     },
     settings: function ()
