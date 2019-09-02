@@ -4,10 +4,10 @@ module.exports = {
   },
   "q-navigation-drawer":{
     "color":"#ffffff",
-    "app":true,
+    "app":false,
     "dark":false,
     "right":true,
-    "clipped":true,
+    "clipped":false,
     "fixed":true,
     "miniVariant":false,
     "expandOnHover":false,
@@ -62,7 +62,7 @@ module.exports = {
     "backgroundColor":"#FFFFFF00",
   },
   "colors":{
-    "background":"#FEFEFE",
+    "background":"#fafbff",
     "header":"#FFFFFF",
     "primary":"#1976D2",
     "secondary":"#424242",
