@@ -4,7 +4,7 @@ module.exports = {
   },
   "q-navigation-drawer":{
     "color":"#ffffff",
-    "app":false,
+    "app":true,
     "dark":false,
     "right":true,
     "clipped":true,
@@ -56,6 +56,7 @@ module.exports = {
   },
   "q-tabs":{
     "icons":false,
+    "vertical":true,
     "elevation":0,
     "color":"#1976d2",
     "backgroundColor":"#FFFFFF00",
