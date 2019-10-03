@@ -200,10 +200,7 @@ export default {
   mounted () {
     this.settings = container.get('settings').get('style', _.clone(TemplateDefault))
     let val = container.get('settings').get('style.template', 'default')
-    this.template = {
-      value: val,
-      name: val
-    }
+    this.template = this.templates.find(i => { console.log(i); return i.name == val })
   },
   methods: {
     updateTemplate() {
