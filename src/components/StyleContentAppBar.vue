@@ -8,6 +8,7 @@
         cols="12"
         md="6"
       >
+        <q-text-field v-model="settings.maxWidth" class="ma-1" label="Max Width"></q-text-field>
         <v-switch
           v-model="settings.absolute"
           class="ma-1"
@@ -42,6 +43,8 @@
           clearable
         ></v-slider>
         <q-color-picker v-model="settings.color" label="Color" class="ma-0" />
+
+        <q-text-field v-model="settings.style" class="ma-1" label="Style"></q-text-field>
       </v-col>
       <v-col
         cols="12"
@@ -61,13 +64,15 @@ export default {
   ],
   data: () => ({
     settings: {
+      maxWidth: 9999,
       color:'#ffffff',
       absolute: false,
       fixed: false,
       dark: false,
       extended:false,
       dense:false,
-      elevation: 1
+      elevation: 1,
+      style: ''
     }
   })
 }

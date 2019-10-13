@@ -3,10 +3,10 @@ module.exports = {
     "dark": false
   },
   "q-content":{
-    "style": ""
+    "style": "padding-top: 180px"
   },
   "q-container":{
-    "style": "padding: 0; max-width: 1400px"
+    "style": "'padding: 0; max-width: 1140px !important; background: red'"
   },
   "q-navigation-drawer":{
     "color":"#ffffff",
@@ -68,7 +68,7 @@ module.exports = {
     "backgroundColor":"#FFFFFF00",
   },
   "colors":{
-    "background":"#fafbff",
+    "background":"#ffffff",
     "header":"#FFFFFF",
     "primary":"#1976D2",
     "secondary":"#424242",
@@ -83,8 +83,15 @@ module.exports = {
     "bottom":true,
   },
   "q-app-bar":{
-    "fixed":true,
-    "elevation":0
+    "absolute":true,
+    "fixed":false,
+    "dark":false,
+    "extended":false,
+    "dense":false,
+    "elevation":0,
+    "maxWidth": 1140,
+    "color":"#f8f8f8",
+    "style": "border: 1px solid #e7e7e7 !important; border-radius: 5px;margin: 30px auto; top: 80px"
   },
   "q-sidebar":{
     "color":"#ffffff",
@@ -106,8 +113,8 @@ module.exports = {
     "elevation":0,
     "tile":true,
     "dark":false,
-    "borderSize":2,
-    "borderColor":"#F1F1F1FF"
+    "borderSize":0,
+    "borderColor":"#F1F1F1"
   },
   "q-autocomplete":{
   },

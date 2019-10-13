@@ -97,6 +97,10 @@ export default {
           "value": "dark-orange"
         },
         {
+          "name": "old-bootstrap",
+          "value": "old-bootstrap"
+        },
+        {
           "name": "custom",
           "value": "custom",
           "custom": true

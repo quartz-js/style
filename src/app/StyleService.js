@@ -2,6 +2,7 @@ import { container } from '@quartz/core'
 import _ from 'lodash'
 import TemplateDefault from '../templates/default'
 import TemplateDarkOrange from '../templates/dark-orange'
+import TemplateOldBootstrap from '../templates/old-bootstrap'
 
 export class StyleService {
 
@@ -10,6 +11,7 @@ export class StyleService {
     return _.get({
       'default': TemplateDefault,
       'dark-orange': TemplateDarkOrange,
+      'old-bootstrap': TemplateOldBootstrap,
       'custom': _.clone(container.get('settings').get('style', TemplateDefault))
     }, data )
   }
