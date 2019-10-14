@@ -2,11 +2,17 @@ module.exports = {
   "general": {
     "dark": false
   },
+  "q-app":{
+    "style": "width: 100%; max-width: 1140px !important; position: relative; margin: 0 auto"
+  },
+  "q-logo":{
+    "style": "position:absolute; top: 10px; max-width: 280px"
+  },
   "q-content":{
     "style": "padding-top: 180px"
   },
   "q-container":{
-    "style": "'padding: 0; max-width: 1140px !important; background: red'"
+    "style": "padding: 0; max-width: 1140px !important;"
   },
   "q-navigation-drawer":{
     "color":"#ffffff",
@@ -89,7 +95,6 @@ module.exports = {
     "extended":false,
     "dense":false,
     "elevation":0,
-    "maxWidth": 1140,
     "color":"#f8f8f8",
     "style": "border: 1px solid #e7e7e7 !important; border-radius: 5px;margin: 30px auto; top: 80px"
   },

@@ -2,6 +2,12 @@ module.exports = {
   "general": {
     "dark": false
   },
+  "q-app":{
+    "style": ""
+  },
+  "q-logo":{
+    "style": "display: none"
+  },
   "q-content":{
     "style": ""
   },
