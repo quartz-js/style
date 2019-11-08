@@ -15,9 +15,8 @@ module.exports = {
     "style": "padding: 0; max-width: 1400px"
   },
   "q-navigation-drawer":{
-    "color":"#ffffff",
     "app":false,
-    "dark":false,
+    "dark":true,
     "right":true,
     "clipped":true,
     "fixed":true,
