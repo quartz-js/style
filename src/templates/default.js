@@ -90,7 +90,8 @@ module.exports = {
   },
   "q-app-bar":{
     "fixed":true,
-    "elevation":0
+    "elevation":0,
+    "color":"#fff"
   },
   "q-sidebar":{
     "color":"#ffffff",
