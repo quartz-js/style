@@ -32,7 +32,6 @@ export class StyleService {
   {
     container.set('$quartz.props', style)
 
-    console.log(JSON.stringify(style.colors))
 
     if (style.general) {
       _.set(container.get('$vue.app'), `$vuetify.theme.dark`, style.general.dark)

@@ -12,7 +12,7 @@ module.exports = {
     "style": ""
   },
   "q-container":{
-    "style": "padding: 0; max-width: 1400px"
+    "style": "padding: 0 10px;"
   },
   "q-navigation-drawer":{
     "color":"#ffffff",
