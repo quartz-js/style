@@ -189,7 +189,7 @@ module.exports = {
     "backgroundColor":"#FFFFFF00"
   },
   "q-textarea":{
-    "autoGrow":true,
+    "autoGrow":false,
     "autofocus":true,
     "clearable":false,
     "counter":0,

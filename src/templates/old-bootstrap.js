@@ -126,7 +126,7 @@ module.exports = {
   "q-select":{
   },
   "q-textarea":{
-    "autoGrow":true,
+    "autoGrow":false,
     "autofocus":true,
     "rowHeight":24,
     "rows":1,
