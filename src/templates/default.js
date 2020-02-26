@@ -94,10 +94,12 @@ module.exports = {
     "color":"#fff"
   },
   "q-sidebar":{
+    "background":"#0747a5",
+    "dark": true,
     "color":"#ffffff",
     "fixed":true,
     "app":true,
-    "width":"250"
+    "width": "300px"
   },
   "q-dialog":{
     "maxWidth":1200,
