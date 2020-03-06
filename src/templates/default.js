@@ -12,7 +12,7 @@ module.exports = {
     "style": ""
   },
   "q-container":{
-    "class": "px-5",
+    "class": "pa-5",
   },
   "q-navigation-drawer":{
     "color":"#ffffff",
