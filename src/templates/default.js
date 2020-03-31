@@ -3,7 +3,7 @@ module.exports = {
     "dark": false
   },
   "q-app":{
-    "style": ""
+    "style": "background:#FAFBFF"
   },
   "q-logo":{
     "style": "display: none"
@@ -75,7 +75,7 @@ module.exports = {
     "backgroundColor":"#FFFFFF00",
   },
   "colors":{
-    "background":"#fafbff",
+    "background":"#FAFBFF",
     "header":"#FFFFFF",
     "primary":"#1976D2",
     "secondary":"#424242",
