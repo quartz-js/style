@@ -26,6 +26,7 @@ module.exports = {
     "temporary":true,
     "floating":false,
     "permanent":false,
+    "stateless":true,
     "width":"1200"
   },
   "q-btn":{
