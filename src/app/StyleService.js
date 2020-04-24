@@ -26,8 +26,6 @@ export class StyleService {
     let style = StyleService.get(container.get('settings').get('style.template', 'default'));
 
     StyleService.update(style)
-
-    console.log('booting style')
   }
 
   static reload()
