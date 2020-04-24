@@ -21,17 +21,28 @@ export class StyleService {
     return StyleService.update(StyleService.get(tmpl));
   }
 
-  static reload()
+  static boot()
   {
     let style = StyleService.get(container.get('settings').get('style.template', 'default'));
 
     StyleService.update(style)
+
+    console.log('booting style')
+  }
+
+  static reload()
+  {
+    this.boot()
+
+    if (container.get('$vue.app')) {
+      container.get('$vue.app').$forceUpdate();
+      window.bus.$emit('component.update');
+    }
   }
 
   static update(style)
   {
     container.set('$quartz.props', style)
-
 
     if (style.general) {
       _.set(container.get('$vue.app'), `$vuetify.theme.dark`, style.general.dark)
@@ -46,10 +57,6 @@ export class StyleService {
       })
     }
 
-    if (container.get('$vue.app')) {
-      container.get('$vue.app').$forceUpdate();
-      window.bus.$emit('component.update');
-    }
     container.set('style', style)
   }
 

@@ -11,7 +11,6 @@ export class StyleServiceProvider extends ServiceProvider {
     })
   }
   boot() {
-    StyleService.reload();
     return;
   }
 }
