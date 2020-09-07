@@ -195,6 +195,7 @@ export default {
   watch: {
     template: function () {
       StyleService.load(this.template.value)
+      StyleService.reload();
     },
     settings: function ()
     {
