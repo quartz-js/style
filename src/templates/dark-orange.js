@@ -3,10 +3,8 @@ module.exports = {
     "dark": true
   },
   "q-app":{
-    "style": ""
-  },
-  "q-logo":{
-    "style": "display: none"
+    "style": "",
+    "dark": true
   },
   "q-content":{
     "style": ""
@@ -173,9 +171,7 @@ module.exports = {
     "singleLine":false,
     "filled":false,
     "persistentHint":false,
-    "flat":false,
-    "color":"#FFFFFF00",
-    "backgroundColor":"#FFFFFF00"
+    "flat":false
   },
   "q-select":{
     "shaped":false,
@@ -185,9 +181,7 @@ module.exports = {
     "singleLine":false,
     "filled":false,
     "persistentHint":false,
-    "flat":false,
-    "color":"#FFFFFF00",
-    "backgroundColor":"#FFFFFF00"
+    "flat":false
   },
   "q-textarea":{
     "autoGrow":false,
@@ -205,9 +199,7 @@ module.exports = {
     "rows":1,
     "shaped":false,
     "singleLine":false,
-    "solo":false,
-    "color":"#FFFFFF00",
-    "backgroundColor":"#FFFFFF00"
+    "solo":false
   },
   "q-text-field":{
     "shaped":false,
@@ -217,9 +209,7 @@ module.exports = {
     "singleLine":false,
     "filled":false,
     "persistentHint":false,
-    "flat":false,
-    "color":"#FFFFFF00",
-    "backgroundColor":"#9C27B0FF"
+    "flat":false
   },
   "q-icon":{
     "color":"#E0E0E0",

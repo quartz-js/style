@@ -5,9 +5,6 @@ module.exports = {
   "q-app":{
     "style": "background:#FAFBFF"
   },
-  "q-logo":{
-    "style": "display: none"
-  },
   "q-content":{
     "style": ""
   },
@@ -129,5 +126,15 @@ module.exports = {
     "rows":1,
   },
   "q-text-field":{
+    "persistent-hint": true
+  },
+  "breakpoints": {
+    "max": {
+      "md": {
+        "q-tabs":{
+          "vertical":false,
+        }
+      }
+    }
   }
 }
